@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Тренинг</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<!-- HEADER -->
+	<header class="header">
+		<div class="header__wrap">
+			<div class="layout-center-wrapper">
+				<div class="header__inner">
+					<div class="header__left">
+						<p class="header__author">Курс Александры Бланко</p>
+						<h1 class="header__title">Курс «Искусство выстраивать связи»</h1>
+						<p class="header__slogan">Обрети свой индивидуальный стиль общения</p>
+						<!-- <p class="header__date">{{data["event"]["date"]}}</p> -->
+						<button type="button" class="template-btn" id="headerToPaymentBtn">
+							<span>Принять участие</span>
+						</button>
+						{% if data['admin'] %}
+						<!-- EDIT TEMPLATE -->
+						<br><br><a href="/manager/info"><button class="template-btn" type="button" id="" onclick="">
+								<span>Изменить описание</span>
+							</button></a>
+						<!-- EDIT TEMPLATE -->
+						{% end %}
+					</div>
+					<!-- <div class="header__right">
+						<img src="img/header-intro.png" alt="">
+					</div> -->
+				</div>
+			</div>
+		</div>
+
+		<div style="background-image: url(img/header-bg.jpg);" class="header__bg-layout">
+		</div>
+	</header>
+
+	<main>
+		<!-- AUDIENCE -->
+		<div class="audience">
+			<div class="layout-center-wrapper">
+				<h3 class="audience__title training-title">КОМУ БУДЕТ ПОЛЕЗЕН КУРС</h3>
+				<ul class="audience__list">
+					<li class="audience__item">
+						<div class="audience__num"><span>1</span></div>
+						<p class="audience__text">Вы не понимаете и не всегда принимаете СЕБЯ</p>
+					</li>
+					<li class="audience__item">
+						<div class="audience__num"><span>2</span></div>
+						<p class="audience__text">ПРЕДПРИНИМАТЕЛЯМ для знакомства с влиятельными людьми, построения
+							качественных отношений с партнерами и вдохновляющей презентации своих продуктов, развития
+							своего личного бренда, более эффективного управления своей командой</p>
+					</li>
+					<li class="audience__item">
+						<div class="audience__num"><span>3</span></div>
+						<p class="audience__text">СЕТЕВИКАМ для развития своего личного бренда, привлечения новых
+							партнеров, построения качественных отношений с новыми и действующими партнерами</p>
+					</li>
+					<li class="audience__item">
+						<div class="audience__num"><span>4</span></div>
+						<p class="audience__text">ЭКСПЕРТАМ для проведения запоминающихся эфиров, курсов; для знакомства
+							с влиятельными людьми и заключению эффективных коллабораций</p>
+					</li>
+					<li class="audience__item">
+						<div class="audience__num"><span>5</span></div>
+						<p class="audience__text">БЛОГЕРАМ для проведения запоминающихся творческих эфиров</p>
+					</li>
+					<li class="audience__item">
+						<div class="audience__num"><span>5</span></div>
+						<p class="audience__text">НАЕМНЫМ СОТРУДНИКАМ для получения более высокооплачиваемой работы,
+							получения повышения, невзирая на кризисы</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- KNOWLEDGE -->
+		<div class="knowledge">
+			<div class="layout-center-wrapper">
+				<h3 class="knowledge__title training-title">КАКИЕ РЕЗУЛЬТАТЫ ВЫ ПОЛУЧИТЕ</h3>
+				<div class="knowledge__inner">
+					<ul class="knowledge__list">
+						<li class="knowledge__item">
+							<div class="knowledge__num"><span>1</span></div>
+							<p class="knowledge__text">Научитесь без страха общаться с людьми</p>
+						</li>
+						<li class="knowledge__item">
+							<div class="knowledge__num"><span>2</span></div>
+							<p class="knowledge__text">Научитесь знакомиться с влиятельными людьми</p>
+						</li>
+						<li class="knowledge__item">
+							<div class="knowledge__num"><span>3</span></div>
+							<p class="knowledge__text">Начнете говорить уверенным голосом</p>
+						</li>
+						<li class="knowledge__item">
+							<div class="knowledge__num"><span>4</span></div>
+							<p class="knowledge__text">Найдете себе наставника</p>
+						</li>
+						<li class="knowledge__item">
+							<div class="knowledge__num"><span>5</span></div>
+							<p class="knowledge__text">Научитесь преодолевать страхи и внутренние зажимы</p>
+						</li>
+						<li class="knowledge__item">
+							<div class="knowledge__num"><span>5</span></div>
+							<p class="knowledge__text">Начнете лучше понимать потребности людей</p>
+						</li>
+					</ul>
+
+					<div class="knowledge__img-wrap">
+						<img src="img/about.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- MIDDLE TITLE -->
+		<div class="middle-title" style="background-image: url(img/header-bg.jpg);">
+			<div class="layout-center-wrapper">
+				<div class="middle-title__inner">
+					<div>
+						<h1 class="middle-title__text">Курс «Искусство выстраивать связи»</h1>
+					</div>
+					<button type="button" class="template-btn" id="middleToPaymentBtn">
+						<span>Принять участие</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- VIDEO BLOCK -->
+		<div class="video-block">
+			<div class="layout-center-wrapper">
+				<div class="video-block__inner">
+					<div class="video-block__left">
+						<h3 class="video-block__title">Специально для вас мы записали видео о&nbsp;курсе</h3>
+					</div>
+					<div class="video-block__right">
+						<iframe class="video-block__frame" src="https://www.youtube.com/embed/dYfC0uIWR9g"
+							frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen=""></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- CAUCH BLOCK -->
+		<div class="coach-block">
+			<div class="layout-center-wrapper">
+				<h3 class="coach-block__title">Автор и руководитель курса</h3>
+				<div class="coach-block__inner">
+					<div class="coach-block__img-wrap">
+						<img src="img/author.png" alt="">
+					</div>
+					<div class="coach-block__desc-wrap">
+						<span class="coach-block__name">Александра Бланко</span>
+						<p class="coach-block__text">Предприниматель</p>
+						<p class="coach-block__text">Автор курса «Искусство выстраивать связи» </p>
+						<p class="coach-block__text">Опыт - 15 лет экспертизы на международных рынках</p>
+						<p class="coach-block__text">Достижения - Ментор для выпускников MBA, а также других программ в
+							СКОЛКОВО и успешных бизнесменов</p>
+						<p class="coach-block__text">Умею “влюблять” в себя людей и заключать многомиллионные контракты
+							даже после одной встречи</p>
+						<p class="coach-block__text">Сделала стартап монополистом, который заходил на зрелый и высоко
+							конкурентный рынок</p>
+						<p class="coach-block__text">Успешно прошла 2 кризиса и вывела компании в ТОП</p>
+						<p class="coach-block__text">Вывела филиал в России на 1-е место в Мире по прибыльности</p>
+						<p class="coach-block__text">Прекрасный нетворкер и умею располагать к себе собеседника, даже не
+							встречаясь и не разговаривая с ним</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- FOOTER -->
+	<footer class="footer" style="background-image: url(img/footer-bg.jpg);">
+		<div class="layout-center-wrapper">
+			<div class="footer__inner">
+				<div class="footer__tarif-wrap">
+					<h4 class="footer__list-title">Тариф «VIP»:</h4>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<span class="footer__marker"></span>
+							<p class="footer__text">16 уроков</p>
+						</li>
+						<li class="footer__item">
+							<span class="footer__marker"></span>
+							<p class="footer__text">После каждого урока практические задания </p>
+						</li>
+						<li class="footer__item">
+							<span class="footer__marker"></span>
+							<p class="footer__text">Возможность задать автору курса любые вопросы по теме курса, учитывая Вашу личную ситуацию</p>
+						</li>
+						<li class="footer__item">
+							<span class="footer__marker"></span>
+							<p class="footer__text">Доступ к чату «VIP» после окончания курса на 6 месяцев</p>
+						</li>
+					</ul>
+
+					<!-- <h4 class="footer__list-title">Тариф «Премиум»:</h4>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<span class="footer__marker"></span>
+							<p class="footer__text">Все, что входит в модуль СТАНДАРТ</p>
+						</li>
+						<li class="footer__item">
+							<span class="footer__marker"></span>
+							<p class="footer__text">Личное сопровождение курса от автора </p>
+						</li>
+						<li class="footer__item">
+							<span class="footer__marker"></span>
+							<p class="footer__text">Дополнительный модуль: " законы отношений в мужчина -женщина"”</p>
+						</li>
+					</ul> -->
+				</div>
+
+				<!-- PAYMENT BLOCK -->
+				<div class="payment" id="paymentBlock">
+					<div class="payment__header">
+						<span class="payment__text">Стоимость тренинга:</span>
+						<span class="payment__amount">{{item['price']}} ₽</span>
+					</div>
+					
+					{% if lead_promo %}
+					<div class="payment__inner">
+						<div class="payment__btns-wrap">
+							<button class="template-btn" type="button" id="cardBtn">
+								<span>Оплатить картой</span>
+							</button>
+
+							<img src="img/visa-logo.svg" alt="visa">
+						</div>
+						<div class="payment__btns-wrap">
+							<button class="template-btn" type="button" id="ntzdBtn">
+								<span>Оплатить в ntz</span>
+							</button>
+							<img src="img/ntz-logo.svg" alt="visa">
+						</div>
+					</div>
+
+					{% else %}
+					<div class="non-ref">
+						<p class="non-ref__text">Для совершения покупки Вам необходима реферальная ссылка. Для её
+							получения обратитесь к тому, кто Вам посоветовал этот товар или найдите ссылку в инстаграме
+							по хештегу
+							<a href="https://www.instagram.com/explore/tags/netizensteam/">#netizensteam</a></p>
+					</div>
+					{% end %}
+				</div>
+			</div>
+		</div>
+
+		<!-- GOODS BLOCK ! IMPORTANT-->
+		<input type="hidden" name="item_number" id="tiktok-instagram_ticket" class="items_quantity" value=1 min=1
+			disabled data-price="2400" data-old_price="2400"
+			data-name="Академия &quot;Запусти свой ТикТок + Инстаграм&quot; «Стандарт»" data-image="">
+
+		<input type="hidden" name="item_number" id="tiktok-instagram_ticket2" class="items_quantity2" value=1 min=1
+			disabled data-price="6600" data-old_price="6600"
+			data-name="Академия &quot;Запусти свой ТикТок + Инстаграм&quot; «Премиум»" data-image="">
+		<!-- GOODS BLOCK ! IMPORTANT-->
+
+		<!-- POLICY BLOCK -->
+		<div class="footer__policy">
+			<div class="layout-center-wrapper">
+				<div class="footer__policy-inner">
+					<span class="footer__policy-left">&copy; Official partner of the Netizens ecosystem</span>
+					<div class="footer__policy-right">
+						<a href="docs/политика конфиденциальности.pdf" class="footer__link" download="">Политика
+							конфиденциальности</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="form__overlay" id="formOverlay"></div>
+		<div class="form__overlay" id="formOverlay2"></div>
+
+		<!-- RUR FORM -->
+		<div class="form__wrap" id="paymentFormRUR">
+			<form action="#" class="form">
+				<span class="form__close-btn" id="closeRurForm"></span>
+				<div class="form__inner">
+					<h3 class="form__title">купить курс</h3>
+					<p class="form__text">Чтобы приобрести курс, заполните все поля</p>
+
+					<input name="name" value="{{lead_name}}" type="text" placeholder="Имя и Фамилия" required
+						class="form__field" id="userNameFormRUR">
+					<input name="phone" value="{{lead_phone}}" type="tel" placeholder="Телефон" class="form__field"
+						required id="userPhoneFormRUR">
+					<input name="email" value="{{lead_email}}" type="email" placeholder="E-mail" required
+						class="form__field" id="userEmailFormRUR">
+
+					<button id="send_rur" class="form__btn template-btn noselect" type="button"
+						onclick="addOrder('FormRUR')">
+						<span>Оплатить</span>
+					</button>
+
+					<p class="form__personal">Нажимая кнопку “Оплатить”, вы соглашаетесь c политикой конфиденциальности
+						и даёте согласие на обработку персональных
+						данных</p>
+				</div>
+			</form>
+		</div>
+
+		<!-- NTZ FORM -->
+		<div class="form__wrap" id="paymentFormNTZ">
+			<form action="#" class="form">
+				<span class="form__close-btn" id="closeNTZForm"></span>
+				<div class="form__inner">
+					<h3 class="form__title">купить курс</h3>
+					<p class="form__text">Чтобы приобрести курс, заполните все поля</p>
+
+					<input name="login" value="{{lead_login}}" type="text" placeholder="Ваш логин в ntz.team" required
+						class="form__field" id="userLoginFormNTZ">
+
+					<input name="name" value="{{lead_name}}" type="text" placeholder="Имя и Фамилия" required
+						class="form__field" id="userNameFormNTZ">
+					<input name="phone" value="{{lead_phone}}" type="tel" placeholder="Телефон" class="form__field"
+						required id="userPhoneFormNTZ">
+					<input name="email" value="{{lead_email}}" type="email" placeholder="E-mail" required
+						class="form__field" id="userEmailFormNTZ">
+
+					<button id="send_ntz" class="form__btn template-btn noselect" type="button"
+						onclick="addOrder('FormNTZ')">
+						<span>Оплатить</span>
+					</button>
+
+					<p class="form__personal">Нажимая кнопку “Оплатить”, вы соглашаетесь c политикой конфиденциальности
+						и даёте согласие на обработку персональных
+						данных</p>
+
+					{% if lead_promo %}
+					<span class="form__control">Контрольное слово: {{lead_promo}}</span>
+					{% end %}
+				</div>
+			</form>
+		</div>
+
+		<!-- RUR FORM -->
+		<div class="form__wrap" id="payment2FormRUR">
+			<form action="#" class="form">
+				<span class="form__close-btn" id="close2RurForm"></span>
+				<div class="form__inner">
+					<h3 class="form__title">купить курс</h3>
+					<p class="form__text">Чтобы приобрести курс, заполните все поля</p>
+
+					<input name="name" value="{{lead_name}}" type="text" placeholder="Имя и Фамилия" required
+						class="form__field" id="userName2FormRUR">
+					<input name="phone" value="{{lead_phone}}" type="tel" placeholder="Телефон" class="form__field"
+						required id="userPhone2FormRUR">
+					<input name="email" value="{{lead_email}}" type="email" placeholder="E-mail" required
+						class="form__field" id="userEmail2FormRUR">
+
+					<button id="send_rur2" class="form__btn template-btn noselect" type="button"
+						onclick="addOrder2('FormRUR')">
+						<span>Оплатить</span>
+					</button>
+
+					<p class="form__personal">Нажимая кнопку “Оплатить”, вы соглашаетесь c политикой конфиденциальности
+						и даёте согласие на обработку персональных
+						данных</p>
+				</div>
+			</form>
+		</div>
+
+		<!-- NTZ FORM -->
+		<div class="form__wrap" id="payment2FormNTZ">
+			<form action="#" class="form">
+				<span class="form__close-btn" id="close2NTZForm"></span>
+				<div class="form__inner">
+					<h3 class="form__title">купить курс</h3>
+					<p class="form__text">Чтобы приобрести курс, заполните все поля</p>
+
+					<input name="login" value="{{lead_login}}" type="text" placeholder="Ваш логин в ntz.team" required
+						class="form__field" id="userLogin2FormNTZ">
+
+					<input name="name" value="{{lead_name}}" type="text" placeholder="Имя и Фамилия" required
+						class="form__field" id="userName2FormNTZ">
+					<input name="phone" value="{{lead_phone}}" type="tel" placeholder="Телефон" class="form__field"
+						required id="userPhone2FormNTZ">
+					<input name="email" value="{{lead_email}}" type="email" placeholder="E-mail" required
+						class="form__field" id="userEmail2FormNTZ">
+
+					<button id="send_ntz2" class="form__btn template-btn noselect" type="button"
+						onclick="addOrder2('FormNTZ')">
+						<span>Оплатить</span>
+					</button>
+
+					<p class="form__personal">Нажимая кнопку “Оплатить”, вы соглашаетесь c политикой конфиденциальности
+						и даёте согласие на обработку персональных
+						данных</p>
+
+					{% if lead_promo %}
+					<span class="form__control">Контрольное слово: {{lead_promo}}</span>
+					{% end %}
+				</div>
+			</form>
+		</div>
+
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/base.js"></script>
+	<script src="js/api.js"></script>
+
+</body>
+
+</html>
