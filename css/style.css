@@ -1091,7 +1091,6 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .header__right {
-	margin-top: -40px;
 	z-index: 5;
 }
 
