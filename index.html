@@ -1,3 +1,6 @@
+{% set item = data['items']['effectivecommunication9keys']['products'][0] %}
+{% set ticket1 = data['items']['effectivecommunication9keys']['ticket1'] %}
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -72,7 +75,7 @@
 						<p class="audience__text">БЛОГЕРАМ для проведения запоминающихся творческих эфиров</p>
 					</li>
 					<li class="audience__item">
-						<div class="audience__num"><span>5</span></div>
+						<div class="audience__num"><span>6</span></div>
 						<p class="audience__text">НАЕМНЫМ СОТРУДНИКАМ для получения более высокооплачиваемой работы,
 							получения повышения, невзирая на кризисы</p>
 					</li>
@@ -107,7 +110,7 @@
 							<p class="knowledge__text">Научитесь преодолевать страхи и внутренние зажимы</p>
 						</li>
 						<li class="knowledge__item">
-							<div class="knowledge__num"><span>5</span></div>
+							<div class="knowledge__num"><span>6</span></div>
 							<p class="knowledge__text">Начнете лучше понимать потребности людей</p>
 						</li>
 					</ul>
@@ -224,7 +227,7 @@
 				<div class="payment" id="paymentBlock">
 					<div class="payment__header">
 						<span class="payment__text">Стоимость тренинга:</span>
-						<span class="payment__amount">{{item['price']}} ₽</span>
+						<span class="payment__amount">{{ticket1['price']}} ₽</span>
 					</div>
 					
 					{% if lead_promo %}
@@ -257,13 +260,9 @@
 		</div>
 
 		<!-- GOODS BLOCK ! IMPORTANT-->
-		<input type="hidden" name="item_number" id="tiktok-instagram_ticket" class="items_quantity" value=1 min=1
-			disabled data-price="2400" data-old_price="2400"
-			data-name="Академия &quot;Запусти свой ТикТок + Инстаграм&quot; «Стандарт»" data-image="">
-
-		<input type="hidden" name="item_number" id="tiktok-instagram_ticket2" class="items_quantity2" value=1 min=1
-			disabled data-price="6600" data-old_price="6600"
-			data-name="Академия &quot;Запусти свой ТикТок + Инстаграм&quot; «Премиум»" data-image="">
+		<input type="hidden" name="item_number" id="{{ticket1['code']}}" class="items_quantity" value=1 min=1 disabled
+			data-price="{{ticket1['price']}}" data-old_price="{{ticket1['old_price']}}" data-name="{{ticket1['name']}}"
+			data-image="{{ticket1['image']}}">
 		<!-- GOODS BLOCK ! IMPORTANT-->
 
 		<!-- POLICY BLOCK -->
