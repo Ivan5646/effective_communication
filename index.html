@@ -1,5 +1,6 @@
 {% set item = data['items']['effectivecommunication9keys']['products'][0] %}
 {% set ticket1 = data['items']['effectivecommunication9keys']['ticket1'] %}
+{% set ticket2 = data['items']['effectivecommunication9keys']['ticket2'] %}
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -255,6 +256,38 @@
 							<a href="https://www.instagram.com/explore/tags/netizensteam/">#netizensteam</a></p>
 					</div>
 					{% end %}
+					<div class="payment__inner"></div>
+
+					<div class="payment__header">
+						<span class="payment__text">{{ticket2['name']}}:</span>
+						<span class="payment__amount">{{ticket2['price']}} ₽</span>
+					</div>
+
+					{% if lead_promo %}
+					<div class="payment__inner">
+						<div class="payment__btns-wrap">
+							<button class="template-btn" type="button" id="cardBtn2">
+								<span>Оплатить картой</span>
+							</button>
+
+							<img src="img/visa-logo.svg" alt="visa">
+						</div>
+						<div class="payment__btns-wrap">
+							<button class="template-btn" type="button" id="ntzdBtn2">
+								<span>Оплатить в ntz</span>
+							</button>
+							<img src="img/ntz-logo.svg" alt="visa">
+						</div>
+					</div>
+
+					{% else %}
+					<div class="non-ref">
+						<p class="non-ref__text">Для совершения покупки Вам необходима реферальная ссылка. Для её
+							получения обратитесь к тому, кто Вам посоветовал этот товар или найдите ссылку в инстаграме
+							по хештегу
+							<a href="https://www.instagram.com/explore/tags/netizensteam/">#netizensteam</a></p>
+					</div>
+					{% end %}
 				</div>
 			</div>
 		</div>
@@ -263,6 +296,10 @@
 		<input type="hidden" name="item_number" id="{{ticket1['code']}}" class="items_quantity" value=1 min=1 disabled
 			data-price="{{ticket1['price']}}" data-old_price="{{ticket1['old_price']}}" data-name="{{ticket1['name']}}"
 			data-image="{{ticket1['image']}}">
+
+		<input type="hidden" name="item_number" id="{{ticket2['code']}}" class="items_quantity2" value=1 min=1 disabled
+			data-price="{{ticket2['price']}}" data-old_price="{{ticket2['old_price']}}" data-name="{{ticket2['name']}}"
+			data-image="{{ticket2['image']}}">
 		<!-- GOODS BLOCK ! IMPORTANT-->
 
 		<!-- POLICY BLOCK -->
