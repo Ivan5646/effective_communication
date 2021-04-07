@@ -1,6 +1,7 @@
 {% set item = data['items']['effectivecommunication9keys']['products'][0] %}
 {% set ticket1 = data['items']['effectivecommunication9keys']['ticket1'] %}
 {% set ticket2 = data['items']['effectivecommunication9keys']['ticket2'] %}
+{% set ticket3 = data['items']['effectivecommunication9keys']['ticket3'] %}
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -340,7 +341,7 @@
 						<span class="payment__text">Стоимость тарифа "Оптимальный":</span>
 						<span class="payment__amount">{{ticket2['price']}} ₽</span>
 					</div>
-					{% if lead_promo %}
+
 					<div class="payment__inner">
 						<div class="payment__btns-wrap">
 							<button class="template-btn" type="button" id="cardBtn2">
@@ -362,7 +363,7 @@
 						<span class="payment__text">Стоимость тарифа "VIP":</span>
 						<span class="payment__amount">{{ticket3['price']}} ₽</span>
 					</div>
-					{% if lead_promo %}
+
 					<div class="payment__inner">
 						<div class="payment__btns-wrap">
 							<button class="template-btn" type="button" id="cardBtn3">
