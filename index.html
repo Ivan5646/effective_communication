@@ -211,7 +211,8 @@
 						</li>
 						<li class="footer__item">
 							<span class="footer__marker"></span>
-							<p class="footer__text">16 домашних заданий. Для самостоятельной проработки. Без проверки.</p>
+							<p class="footer__text">16 домашних заданий. Для самостоятельной проработки. Без проверки.
+							</p>
 						</li>
 					</ul>
 
@@ -253,7 +254,9 @@
 							<span class="footer__marker"></span>
 							<p class="footer__text">Доступ к чату поддержки</p>
 						</li>
-						<li class="footer__item"><p class="footer__text">*всего 50 свободных мест</p></li>
+						<li class="footer__item">
+							<p class="footer__text">*всего 50 свободных мест</p>
+						</li>
 					</ul>
 
 					<h4 class="footer__list-title">Тариф VIP:</h4>
@@ -307,15 +310,28 @@
 							<span class="footer__marker"></span>
 							<p class="footer__text">Работа в закрытой группе с Александрой Бланко</p>
 						</li>
-						<li class="footer__item"><p class="footer__text">*всего 10 свободных мест</p></li>
+						<li class="footer__item">
+							<span class="footer__marker"></span>
+							<p class="footer__text">Совместное посещение оффлайн мероприятия</p>
+						</li>
+						<li class="footer__item">
+							<p class="footer__text">*всего 10 свободных мест</p>
+						</li>
 					</ul>
 				</div>
 
 				<!-- PAYMENT BLOCK -->
 				<div class="payment" id="paymentBlock">
+					
+
 					<div class="payment__header">
 						<span class="payment__text">Стоимость тарифа "Самостоятельный":</span>
-						<span class="payment__amount">{{ticket1['price']}} ₽</span>
+
+						<div class="payment__amount-wrapper">
+							<span class="payment__amount-old">17000 ₽</span>
+							<!-- <span class="payment__amount">12400 ₽</span> -->
+							<span class="payment__amount">{{ticket1['price']}} ₽</span>
+						</div>
 					</div>
 
 					{% if lead_promo %}
@@ -338,7 +354,11 @@
 					<div class="payment__inner"></div>
 					<div class="payment__header">
 						<span class="payment__text">Стоимость тарифа "Оптимальный":</span>
-						<span class="payment__amount">{{ticket2['price']}} ₽</span>
+						<div class="payment__amount-wrapper">
+							<span class="payment__amount-old">21500 ₽</span>
+							<!-- <span class="payment__amount">15400 ₽</span> -->
+							<span class="payment__amount">{{ticket2['price']}} ₽</span>
+						</div>
 					</div>
 					{% if lead_promo %}
 					<div class="payment__inner">
@@ -360,7 +380,11 @@
 					<div class="payment__inner"></div>
 					<div class="payment__header">
 						<span class="payment__text">Стоимость тарифа "VIP":</span>
-						<span class="payment__amount">{{ticket3['price']}} ₽</span>
+						<div class="payment__amount-wrapper">
+							<span class="payment__amount-old">89000 ₽</span>
+							<!-- <span class="payment__amount">49500 ₽</span> -->
+							<span class="payment__amount">{{ticket3['price']}} ₽</span>
+						</div>
 					</div>
 					{% if lead_promo %}
 					<div class="payment__inner">
@@ -379,7 +403,32 @@
 						</div>
 					</div>
 
-
+					<div class="payment__inner">
+						<div id="paymentTimer" class="timer">
+							<div class="timer__header">
+								<div class="timer__title">Поднятие цен через:</div>
+							</div>
+							<div class="timer__inner">
+								<div class="timer__block">
+									<div class="timer__num" id="timerDays"></div>
+									<div class="timer__text">дней</div>
+								</div>
+								<div class="timer__block">
+									<div class="timer__num" id="timerHours"></div>
+									<div class="timer__text">часов</div>
+								</div>
+								<div class="timer__block">
+									<div class="timer__num" id="timerMinutes"></div>
+									<div class="timer__text">минут</div>
+								</div>
+								<div class="timer__block">
+									<div class="timer__num" id="timerSeconds"></div>
+									<div class="timer__text">секунд</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
 					{% else %}
 					<div class="non-ref">
 						<p class="non-ref__text">Для совершения покупки Вам необходима реферальная ссылка. Для её
@@ -389,6 +438,7 @@
 						</p>
 					</div>
 					{% end %}
+
 				</div>
 			</div>
 		</div>

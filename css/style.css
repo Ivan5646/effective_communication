@@ -517,14 +517,25 @@ input[type='number']::-webkit-outer-spin-button {
 	width: 290px;
 }
 
+.payment__amount-wrapper {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
 .payment__amount {
 	display: block;
 	margin-bottom: 0;
 	font-family: "FuturaPT-Bold", Arial, Helvetica, sans-serif;
-	font-size: 36px;
+	font-size: 31px;
 	line-height: 1.5;
 	text-transform: uppercase;
 	color: #EBB537;
+}
+
+.payment__amount-old {
+	text-decoration: line-through;
 }
 
 .payment__inner {
@@ -555,6 +566,10 @@ input[type='number']::-webkit-outer-spin-button {
 	margin-left: 30px;
 	width: 117px;
 	height: auto;
+}
+
+.payment #paymentTimer {
+	text-align: center;
 }
 
 .form {
@@ -801,6 +816,59 @@ input[type='number']::-webkit-outer-spin-button {
 
 .footer__extra p {
 	margin-bottom: 6px;
+}
+
+.timer {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.timer__inner {
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.timer__block {
+	margin-right: 20px;
+	text-align: center;
+}
+
+.timer__num {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-ms-flex-align: center;
+	align-items: center;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #eeeeee;
+	font-size: 18px;
+	margin-bottom: 13px;
+}
+
+.timer__text {
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+.timer__title {
+	font-size: 16px;
+	margin-bottom: 9px;
+}
+
+.timer__sub-title {
+	font-size: 14px;
+}
+
+.timer__header {
+	margin-bottom: 21px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1215,6 +1283,8 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .payment__header {
+	-ms-flex-direction: column;
+	flex-direction: column;
 	padding-top: 19px;
 	padding-bottom: 17px;
 	padding-left: 30px;
@@ -1222,10 +1292,13 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .payment__text {
-	margin-right: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 16px;
+	text-align: center;
 	font-size: 14px;
 	line-height: 1.6;
-	width: 90px;
+	width: auto;
 }
 
 .payment__amount {
