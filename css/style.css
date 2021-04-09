@@ -837,6 +837,10 @@ input[type='number']::-webkit-outer-spin-button {
 	text-align: center;
 }
 
+.timer__block:last-of-type {
+	margin-right: 0;
+}
+
 .timer__num {
 	display: -ms-flexbox;
 	display: flex;
